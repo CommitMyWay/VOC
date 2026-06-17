@@ -47,23 +47,6 @@ User Intent (natural language)
 | Reddit | 2 | Direct scrape |
 | YouTube comments | 3 | Direct scrape |
 
----
-
-## Key Files
-
-| File | Purpose |
-|------|---------|
-| `crawl_reviews.py` | Core scraper — fetches reviews from all sources |
-| `research_fintech.py` | Research run for MoMo, ZaloPay, VNPay |
-| `research_remaining.py` | Research run for ShopeePay, ZaloPay |
-| `fintech_reviews.json` | Collected review data (current dataset) |
-| `s3_export.py` | Upload workspace snapshot to VNGCloud vStorage S3 |
-| `s3_list.py` | List objects in the S3 bucket |
-| `SOUL.md` | Agent identity and behavioral guidelines |
-| `USER.md` | User profile and preferences |
-| `HEARTBEAT.md` | Proactive check-in configuration |
-
----
 
 ## Quickstart
 
