@@ -1,6 +1,6 @@
 # Market Research AI Agent
 
-> An AI-powered market research agent built on [OpenClaw](https://openclaw.ai) that automatically crawls app store reviews, community forums, and video platforms — then synthesizes actionable intelligence for Product, QA, and Marketing teams.
+> An AI-powered market research agent built on [OpenClaw](https://openclaw.ai) that automatically crawls app store reviews, community forums, and video platforms — then synthesizes actionable intelligence for Product and Marketing teams.
 
 ## Overview
 
@@ -86,10 +86,6 @@ This uploads the full `/root/.openclaw` workspace to your VNGCloud vStorage buck
 **Product Owner / PM**
 - Discover feature gaps and UX friction in competitor apps
 - Prioritize backlog based on real user pain points
-
-**QA / Quality Engineer**
-- Track crashes and bugs appearing in competitor reviews
-- Update test matrices with edge cases you didn't know to look for
 
 **Product Marketing / Growth**
 - Capture user language and competitor weaknesses
