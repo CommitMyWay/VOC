@@ -48,37 +48,6 @@ User Intent (natural language)
 | YouTube comments | 3 | Direct scrape |
 
 
-## Quickstart
-
-### 1. Run a research sweep
-
-```python
-# research_fintech.py
-from scripts.agent_api import run_research
-
-data = await run_research(
-    apps=["MoMo", "ZaloPay", "VNPay"],
-    goal="product",           # "product" | "qa" | "marketing"
-    days_back=180,
-    sources=["google_play", "app_store", "youtube", "reddit", "tinhte", "voz"]
-)
-```
-
-```bash
-python research_fintech.py
-# Output saved to fintech_reviews.json
-```
-
-### 2. Export workspace to S3
-
-Configure credentials (see [Security](#security) below), then:
-
-```bash
-python s3_export.py
-```
-
-This uploads the full `/root/.openclaw` workspace to your VNGCloud vStorage bucket for safe off-agent storage and download.
-
 ---
 
 ## Target Personas & Use Cases
