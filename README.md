@@ -21,9 +21,9 @@ User Intent (natural language)
         ├─► Data Acquisition Layer
         │       ├── Google Play reviews
         │       ├── App Store reviews
-        │       ├── YouTube comments (YouTube Data API v3)
-        │       ├── Reddit threads (Apify actors)
-        │       └── Voz / Tinhte (HTML scraping)
+        │       ├── YouTube comments
+        │       ├── Reddit threads 
+        │       └── Voz / Tinhte 
         │
         ├─► AI Analysis Pipeline
         │       ├── Classify (Bug / UX / Feature Gap / Sentiment)
