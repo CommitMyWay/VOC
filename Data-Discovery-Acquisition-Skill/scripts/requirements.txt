@@ -1,0 +1,8 @@
+# Collection is done by the agent's built-in web_search / web_fetch tools — no
+# HTTP libraries or browser engines are needed here. The only third-party dep is
+# langdetect, used by pipeline.py for vi/en language qualification. It is imported
+# lazily and falls back to "vi" if unavailable, so installs are optional.
+#
+#   pip install -r requirements.txt
+
+langdetect>=1.0.9   # vi/en language qualification (pipeline.py)

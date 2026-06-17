@@ -1,0 +1,147 @@
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/googlesans/v20/4UaGrENHsxJLGDuGo1OIlL3Kwp5eKg.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://fonts.gstatic.com/s/googlesans/v20/4UabrENHsxJLGDuGo1OIlL3O54xeKjUv.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Google Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://fonts.gstatic.com/s/googlesans/v20/4UabrENHsxJLGDuGo1OIlL3N54xeKjUv.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'Product Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://fonts.gstatic.com/s/productsans/v5/HYvgU2fE2nRJvZ5JFAumwegdm0LZxxJZKBJ77uPh9_5Pzh3g8SAXF-rYBB07p5Kl.woff2') format('woff2');
+}
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Newsreader:ital,opsz,wght@0,6..72,200..800;1,6..72,200..800&display=swap');
+
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "DM Sans", "Google Sans", "Product Sans", system-ui, -apple-system, sans-serif;
+  --font-serif: "Newsreader", Georgia, serif;
+}
+
+@keyframes border-run {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-border-run {
+  background-size: 200% auto;
+  animation: border-run 4s ease infinite;
+}
+
+@keyframes subtle-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-active {
+  background: linear-gradient(90deg, #f1f5f9 25%, #f8fafc 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: subtle-shimmer 2s infinite linear;
+}
+
+/* HIGH FIDELITY PRINT ACTION STYLING */
+@media print {
+  /* Dynamic page reset */
+  html, body {
+    background: #ffffff !important;
+    color: #1f2937 !important;
+    font-family: "Google Sans", sans-serif !important;
+    height: auto !important;
+    overflow: visible !important;
+  }
+  
+  /* Hide UI elements that are non-essential/operational */
+  aside, 
+  header, 
+  footer, 
+  button, 
+  select, 
+  form, 
+  .no-print {
+    display: none !important;
+  }
+  
+  /* Reset layout constraints on main, let report stretch full-width */
+  main {
+    width: 100% !important;
+    max-width: 100% !important;
+    background: transparent !important;
+    overflow: visible !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    float: none !important;
+    position: static !important;
+  }
+  
+  /* Reveal print-only executive header letterhead */
+  .print-only-header {
+    display: block !important;
+    border-bottom: 2px solid #0b57d0 !important;
+    margin-bottom: 2rem !important;
+    padding-bottom: 1rem !important;
+  }
+
+  /* Make sure flex grids flow sequentially down paper pages */
+  .flex-1.flex.flex-col.md\:flex-row.min-h-0 {
+    display: block !important;
+    overflow: visible !important;
+    height: auto !important;
+  }
+  
+  .overflow-y-auto {
+    overflow: visible !important;
+    height: auto !important;
+    max-height: none !important;
+  }
+
+  .grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 1.5rem !important;
+  }
+
+  /* Keep cards together and avoid splitting mid-way across page borders */
+  .bg-white {
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+    border: 1px solid #e5e7eb !important;
+    box-shadow: none !important;
+    margin-bottom: 2rem !important;
+    padding: 1.5rem !important;
+  }
+
+  svg {
+    max-width: 100% !important;
+    page-break-inside: avoid !important;
+    break-inside: avoid !important;
+  }
+}
+
+.print-only-header {
+  display: none;
+}

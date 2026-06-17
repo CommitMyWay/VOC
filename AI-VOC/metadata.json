@@ -1,0 +1,8 @@
+{
+  "name": "Market Research Agent",
+  "description": "Analyze products and competitor reports from app store reviews and public data using Gemini.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
